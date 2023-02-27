@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol Builder {
+protocol AssemblyBuilderProtocol {
     static func createMainModule() -> UIViewController
 }
 
-class ModelBuilder: Builder {
+class AssemblyModelBuilder: AssemblyBuilderProtocol {
     static func createMainModule() -> UIViewController {
         let view = MainViewController()
         let networkService = NetworkService()
